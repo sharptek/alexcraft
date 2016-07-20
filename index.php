@@ -1,6 +1,14 @@
 <?php
 
-switch($_SERVER['REQUEST_URI']) {
+// composer autoloader init
+$loader = require 'vendor/autoload.php';
+$loader->register();
+
+use Symfony\Component\HttpFoundation\Request;
+
+$request = Request::createFromGlobals();
+
+switch($request->getPathInfo()) {
     case '/':
         echo 'Home page';
         break;
