@@ -1,0 +1,16 @@
+{
+    "name": "sharptek/alexcraft",
+    "description": "Project for minecraft",
+    "type": "project",
+    "require": {
+        "symfony/http-foundation": "^3.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir Bystritskiy",
+            "email": "bystritskiy.v@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha"
+}
