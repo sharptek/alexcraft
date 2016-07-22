@@ -5,18 +5,21 @@ $loader = require 'vendor/autoload.php';
 $loader->register();
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 $request = Request::createFromGlobals();
+$response = new Response();
 
 switch($request->getPathInfo()) {
     case '/':
-        echo 'Home page';
+        $response->setContent('Home page');
         break;
     case '/about':
-        echo 'Info page';
+        $response->setContent('Info page');
         break;
     default:
-        echo '404. Not Found';
+        $response->setContent('404. Not Found');
+        $response->setStatusCode(Response::HTTP_NOT_FOUND);
 }
-
+$response->send();
 ?>
