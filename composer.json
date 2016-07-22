@@ -3,7 +3,8 @@
     "description": "Project for minecraft",
     "type": "project",
     "require": {
-        "symfony/http-foundation": "^3.1"
+        "symfony/http-foundation": "^3.1",
+        "symfony/http-kernel": "^3.1"
     },
     "license": "MIT",
     "authors": [
